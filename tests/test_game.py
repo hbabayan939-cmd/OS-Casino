@@ -3,7 +3,6 @@ import unittest
 from core.config import POINTS
 from core.game import SlotGame
 
-
 class TestSlotGame(unittest.TestCase):
     def test_three_linux_gives_highest_points(self):
         self.assertEqual(SlotGame.evaluate(["Linux"] * 3), POINTS["Linux"])
