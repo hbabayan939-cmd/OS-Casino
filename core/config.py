@@ -1,10 +1,10 @@
 OS_STYLE = {
-    "Windows": {"label": "WINDOWS", "color": "#0078D6", "text": "white"},
-    "Linux":   {"label": "LINUX",   "color": "#FCC624", "text": "black"},
-    "macOS":   {"label": "macOS",   "color": "#A2AAAD", "text": "black"},
-    "FreeBSD": {"label": "FreeBSD", "color": "#AB2B28", "text": "white"},
-    "NetBSD":  {"label": "NetBSD",  "color": "#FF6600", "text": "white"},
-    "OpenBSD": {"label": "OpenBSD", "color": "#F2CA30", "text": "black"},
+    "Windows": {"label": "WINDOWS", "color": "#FAFAFA", "text": "black", "icon": "windows_logo.png"},
+    "Linux":   {"label": "LINUX",   "color": "#FAFAFA", "text": "black", "icon": "linux_logo.png"},
+    "macOS":   {"label": "macOS",   "color": "#FAFAFA", "text": "black", "icon": "macos_logo.png"},
+    "FreeBSD": {"label": "FreeBSD", "color": "#FAFAFA", "text": "black", "icon": "freebsd_logo.png"},
+    "NetBSD":  {"label": "NetBSD",  "color": "#FAFAFA", "text": "black", "icon": "netbsd_logo.png"},
+    "OpenBSD": {"label": "OpenBSD", "color": "#FAFAFA", "text": "black", "icon": "openbsd_logo.png"},
 }
 
 OS_NAMES = list(OS_STYLE.keys())

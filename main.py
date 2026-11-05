@@ -1,10 +1,13 @@
 import random
+from pathlib import Path
+
 import customtkinter as ctk
+from PIL import Image
 from core.config import OS_NAMES, OS_STYLE
 from core.game import SlotGame
 from functions.formatting import describe_result
 
-SPIN_FRAMES = 14 
+SPIN_FRAMES = 15
 
 class CasinoApp(ctk.CTk):
     def __init__(self):
@@ -15,6 +18,11 @@ class CasinoApp(ctk.CTk):
 
         self.game = SlotGame()
         self._frame = 0
+        assets_dir = Path(__file__).parent / "assets"
+        self.os_images = {
+            name: self._load_os_image(assets_dir / style["icon"])
+            for name, style in OS_STYLE.items()
+        }
 
         ctk.CTkLabel(
             self, text="OS CASINO", font=ctk.CTkFont(size=32, weight="bold")
@@ -58,7 +66,7 @@ class CasinoApp(ctk.CTk):
         self.spin_button.pack(pady=15)
 
         rules = (
-            "Linux x3: +500 |  FreeBSD 3x: +450 | NetBSD / OpenBSD x3: +250\n"
+            "Linux x3: +500  |  FreeBSD 3x: +450 | NetBSD / OpenBSD x3: +250\n"
             "macOS x3: -300  |  Windows x3: -500"
         )
         ctk.CTkLabel(
@@ -92,8 +100,20 @@ class CasinoApp(ctk.CTk):
         style = OS_STYLE[name]
         box.configure(
             text=style["label"],
+            image=self.os_images[name],
+            compound="top",
             fg_color=style["color"],
             text_color=style["text"],
+        )
+
+    @staticmethod
+    def _load_os_image(path: Path) -> ctk.CTkImage:
+        with Image.open(path) as source:
+            image = source.copy()
+        return ctk.CTkImage(
+            light_image=image,
+            dark_image=image,
+            size=(76, 76),
         )
 
 if __name__ == "__main__":

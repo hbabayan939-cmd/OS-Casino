@@ -1,11 +1,16 @@
+## Attention
+
+This game is intended as a joke and is not meant to satirize any particular corporation (or operating system). This is NOT A REAL CASINO it's a simple game written in Python. Thanks for reading
+
 # OS Casino
 
-OS Casino is a small desktop slot game built with Python and CustomTkinter. Spin three reels featuring operating system names and see your points change when all three match.
+OS Casino is a small desktop slot game built with Python and CustomTkinter for fun. Spin three reels featuring operating system names and see your points change when all three match.
 
 ## Requirements
 
-- Python 3.10 or newer
-- Tk support for your Python installation
+- customtkinter>=5.2.0
+- pillow>=13.0.0
+- playsound3>=3.0.0
 
 The Python packages are listed in `requirements.txt`.
 
