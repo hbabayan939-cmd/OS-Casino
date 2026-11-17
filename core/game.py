@@ -6,14 +6,8 @@ class SlotGame:
         self.score = start_points
         self.rng = rng or random.Random()
 
-    def spin(self) -> tuple[list[str], int]:
-        reels = [self.rng.choice(OS_NAMES) for _ in range(3)]
-        change = self.evaluate(reels)
+    def spin(self) -> tuple[str, int]:
+        result = self.rng.choice(OS_NAMES)
+        change = POINTS[result]
         self.score += change
-        return reels, change
-
-    @staticmethod
-    def evaluate(reels: list[str]) -> int:
-        if len(set(reels)) == 1:
-            return POINTS.get(reels[0], 0)
-        return 0
+        return result, change
