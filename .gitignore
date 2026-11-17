@@ -6,14 +6,6 @@ __pycache__/
 
 .venv/
 venv/
-env/
-ENV/
-
-build/
-dist/
-*.egg-info/
 
 .vscode/
 .idea/
-.DS_Store
-Thumbs.db

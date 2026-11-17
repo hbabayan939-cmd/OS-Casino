@@ -4,7 +4,7 @@ This game is intended as a joke and is not meant to satirize any particular corp
 
 # OS Casino
 
-OS Casino is a small desktop slot game built with Python and CustomTkinter for fun. Spin three reels featuring operating system names and see your points change when all three match.
+OS Casino is a small desktop slot game built with Python and CustomTkinter for fun. Spin a horizontal reel of operating systems and earn or lose points based on the OS selected by the center marker.
 
 ## Requirements
 
@@ -41,16 +41,16 @@ python main.py
 
 ## How to play
 
-Press **SPIN** to roll the three reels. A matching triple awards or subtracts points; mixed reels do not change the score.
+Press **SPIN** to send the horizontal reel scrolling. It slows down and stops with one operating system under the center marker. That OS's points are added to or subtracted from your score on every spin.
 
-| Matching reels | Points |
-|----------------|--------|
-| Linux ×3       | +500   |
-| FreeBSD ×3     | +400   |
-| NetBSD ×3      | +250   |
-| OpenBSD ×3     | +250   |
-| macOS ×3       | −300   |
-| Windows ×3     | −500   |
+| Selected OS | Points |
+|-------------|--------|
+| Linux       | +500   |
+| FreeBSD     | +400   |
+| NetBSD      | +250   |
+| OpenBSD     | +250   |
+| macOS       | −300   |
+| Windows     | −500   |
 
 The score starts at zero and carries over between spins while the app is open.
 
